@@ -15,7 +15,7 @@ const Produtos = () => {
     if (!temOProduto) {
       novoProduto.quantidade = 1;
       return setCarrinho((carrinhoAnterior) => {
-        [
+        return [
           ...carrinhoAnterior,
           novoProduto
         ]
