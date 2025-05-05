@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Produto from "./Produto";
 import produtos from "@/mocks/produtos.json";
 import Titulo from "@/components/Titulo";
-import { useCarrinhoContext } from "../hooks/useCarrinhoContext";
+import { useCarrinhoContext } from "@/hooks/useCarrinhoContext";
 
 const Produtos = () => {
   const {adicionarProduto} = useCarrinhoContext();
