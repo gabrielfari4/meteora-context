@@ -3,13 +3,10 @@ import Botao from "@/components/Botao";
 import Quantidade from "@/components/Quantidade";
 import ValorFormatado from "@/components/ValorFormatado";
 import InfoItemCarrinho from "./InfoItemCarrinho";
+import { useCarrinhoContext } from "../../hooks/useCarrinhoContext";
 
-const ItemCarrinho = ({
-  itemCarrinho,
-  removerProdutoCarrinho,
-  adicionarProduto,
-  removerProduto,
-}) => {
+const ItemCarrinho = ({ itemCarrinho }) => {
+  const {removerProdutoCarrinho} = useCarrinhoContext()
   return (
     <li key={itemCarrinho.id}>
       <>
@@ -23,8 +20,6 @@ const ItemCarrinho = ({
           <ValorFormatado valor={itemCarrinho.preco} />
           <Quantidade
             itemCarrinho={itemCarrinho}
-            adicionarProduto={adicionarProduto}
-            removerProduto={removerProduto}
           />
           <Botao
             variant="deleteItem"
